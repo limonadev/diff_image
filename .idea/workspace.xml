@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="605315c3-7583-47c5-8698-27d62d437f1e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VZax8o9kbrKqDW7EQrBQi01u8E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="diff_image_example.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/example/diff_image_example.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Command Line App.diff_image_example.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="605315c3-7583-47c5-8698-27d62d437f1e" name="Default Changelist" comment="" />
+      <created>1577463315014</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577463315014</updated>
+      <workItem from="1577463317219" duration="16655000" />
+      <workItem from="1577632949342" duration="12001000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1577463453605">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1577463453605" />
+    <state width="1895" height="253" key="GridCell.Tab.0.bottom" timestamp="1577644809873">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="253" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1577644809873" />
+    <state width="1895" height="253" key="GridCell.Tab.0.center" timestamp="1577644809872">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="253" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1577644809872" />
+    <state width="1895" height="253" key="GridCell.Tab.0.left" timestamp="1577644809871">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="253" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1577644809871" />
+    <state width="1895" height="253" key="GridCell.Tab.0.right" timestamp="1577644809873">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="253" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577644809873" />
+    <state width="1895" height="315" key="GridCell.Tab.1.bottom" timestamp="1577596989206">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="315" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1577596989206" />
+    <state width="1895" height="315" key="GridCell.Tab.1.center" timestamp="1577596989205">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="315" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1577596989205" />
+    <state width="1895" height="315" key="GridCell.Tab.1.left" timestamp="1577596989205">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="315" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1577596989205" />
+    <state width="1895" height="315" key="GridCell.Tab.1.right" timestamp="1577596989206">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1895" height="315" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1577596989206" />
+    <state x="441" y="188" key="SettingsEditor" timestamp="1577585118962">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="441" y="188" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1577585118962" />
+    <state x="609" y="273" width="700" height="530" key="recent.locations.popup" timestamp="1577594047146">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="609" y="273" width="700" height="530" key="recent.locations.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1577594047146" />
+    <state x="624" y="254" key="run.anything.popup" timestamp="1577636237600">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="254" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1577636237600" />
+  </component>
+</project>

@@ -1,4 +1,4 @@
-#diff_image
+# diff_image
 
 A Dart Package to get the % difference between two images of the same width and height.
 
@@ -45,20 +45,20 @@ where:
 + `asPercentage` set the format of the output (as percentage or between 0-1)
 + `saveDiff` save a png showing the differences between [firstImgSrc] and [secondImgSrc] (currently not available on Dart Web)
 
-##Sample Results
-###First Image
+## Sample Results
+### First Image
 ![flutter_logo](https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png "Flutter Logo")
-###Second Image
+### Second Image
 ![android_logo](https://seeklogo.com/images/A/android-western-logo-8F117A7F00-seeklogo.com.png "Android Logo")
-###Difference Percentage
+### Difference Percentage
 **With Alpha    :** 35.67169421487167 %
 
 **Without Alpha :** 34.83905183744361 %
-###Difference Image
+### Difference Image
 ![DiffImg](https://raw.githubusercontent.com/limonadev/diff_image/master/DiffImg.png "DiffImg")
 
 
-##Suggestions and bugs
+## Suggestions and bugs
 
 Please file feature requests, suggestions and bugs at the [issue tracker][tracker].
 

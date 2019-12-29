@@ -44,7 +44,7 @@ class DiffImage{
     var diff = 0.0;
 
     //Create an image to show the differences
-    Image diffImg = Image(width, height);
+    var diffImg = Image(width, height);
 
     for(var i=0; i<width; i++){
       var diffAtPixel, firstPixel, secondPixel;

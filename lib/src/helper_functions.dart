@@ -26,9 +26,9 @@ bool haveSameSize(firstImg, secondImg) {
 ///Returns a red color only if two RGB pixels are different
 int selectColor(firstPixel, secondPixel, diffAtPixel){
   var fRed = getRed(firstPixel);     var fGreen = getGreen(firstPixel);
-  var fBlue = getBlue(firstPixel);   var fAlpha = getAlpha(firstPixel);
+  var fBlue = getBlue(firstPixel);
   var sRed = getRed(secondPixel);    var sGreen = getGreen(secondPixel);
-  var sBlue = getBlue(secondPixel);  var sAlpha = getAlpha(secondPixel);
+  var sBlue = getBlue(secondPixel);
 
   if(diffAtPixel == 0) return Color.fromRgba(fRed, fGreen, fBlue, 50);
   if(fRed==0 && fGreen==0 && fBlue==0) return Color.fromRgba(sRed, sGreen, sBlue, 50);

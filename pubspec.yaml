@@ -1,6 +1,6 @@
 name: diff_image
 description: A package to get the difference between two images. Currently only supports images from URLs.
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/limonadev/diff_image
 author: limonadev <limonadev@whiteleaf.dev>
 

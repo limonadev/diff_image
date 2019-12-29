@@ -55,6 +55,7 @@ where:
 
 **Without Alpha :** 34.83905183744361 %
 ###Difference Image
+![DiffImg](https://raw.githubusercontent.com/limonadev/diff_image/master/DiffImg.png "DiffImg")
 
 
 ##Suggestions and bugs

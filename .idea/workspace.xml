@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="605315c3-7583-47c5-8698-27d62d437f1e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1577463315014</updated>
       <workItem from="1577463317219" duration="16655000" />
-      <workItem from="1577632949342" duration="15058000" />
+      <workItem from="1577632949342" duration="16164000" />
     </task>
     <servers />
   </component>
@@ -81,6 +82,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1577463453605" />
+    <state x="659" y="343" width="591" height="419" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1577649283007">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="659" y="343" width="591" height="419" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1577649283007" />
     <state width="1895" height="253" key="GridCell.Tab.0.bottom" timestamp="1577644809873">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

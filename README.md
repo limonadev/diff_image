@@ -1,6 +1,6 @@
 # diff_image
 
-A Dart Package to get the % difference between two images of the same width and height.
+A Dart [Package](https://pub.dev/packages/diff_image) to get the % difference between two images of the same width and height.
 
 diff_image is a Dart version of [this](https://github.com/nicolashahn/diffimg) with changes on visualization and , you guessed it, the language.
 

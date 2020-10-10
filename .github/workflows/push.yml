@@ -1,0 +1,19 @@
+name: Flutter Push Code Checker
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: google/dart:latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Validate
+        uses: peiffer-innovations/actions-flutter-validate@v1.0.1
+        with:
+          flutter_package: true

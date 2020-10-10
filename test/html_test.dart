@@ -6,38 +6,70 @@ void main() {
     String flutterLogoUrl, dartLogoUrl, androidLogoUrl;
 
     setUp(() {
-      //A real image
-      flutterLogoUrl = 'https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png';
-      //Image with different size with respect to flutterLogoUrl
-      dartLogoUrl = 'https://www.extremetech.com/wp-content/uploads/2011/10/dart-logo-banner1-348x196.jpg';
-      //Image with the same size as flutterLogoUrl
-      androidLogoUrl = 'https://seeklogo.com/images/A/android-western-logo-8F117A7F00-seeklogo.com.png';
+      // A real image
+      flutterLogoUrl =
+          'https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png';
+      // Image with different size with respect to flutterLogoUrl
+      dartLogoUrl =
+          'https://www.extremetech.com/wp-content/uploads/2011/10/dart-logo-banner1-348x196.jpg';
+      // Image with the same size as flutterLogoUrl
+      androidLogoUrl =
+          'https://seeklogo.com/images/A/android-western-logo-8F117A7F00-seeklogo.com.png';
     });
 
-    test('Compare the same image', () async{
-      var diff = await DiffImage.compareFromUrl(flutterLogoUrl, flutterLogoUrl);
+    test('Compare the same image', () async {
+      var diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        flutterLogoUrl,
+      );
       expect(diff, 0);
 
-      diff = await DiffImage.compareFromUrl(flutterLogoUrl, flutterLogoUrl, ignoreAlpha: false);
+      diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        flutterLogoUrl,
+        ignoreAlpha: false,
+      );
       expect(diff, 0);
     });
 
-    test('Compare images with different size', () async{
-      try{
-        var diff = await DiffImage.compareFromUrl(flutterLogoUrl, dartLogoUrl);
-      }catch(e){
+    test('Compare images with different size', () async {
+      try {
+        await DiffImage.compareFromUrl(
+          flutterLogoUrl,
+          dartLogoUrl,
+        );
+      } catch (e) {
         expect(e, isA<UnsupportedError>());
       }
     });
 
-    test('Compare different images with same sizes', () async{
-      var diff = await DiffImage.compareFromUrl(flutterLogoUrl, androidLogoUrl);
+    test('Compare different images with same sizes', () async {
+      var diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        androidLogoUrl,
+      );
       expect(diff, 34.83905183744361);
-      diff = await DiffImage.compareFromUrl(flutterLogoUrl, androidLogoUrl, ignoreAlpha: false);
+
+      diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        androidLogoUrl,
+        ignoreAlpha: false,
+      );
       expect(diff, 35.67169421487167);
-      diff = await DiffImage.compareFromUrl(flutterLogoUrl, androidLogoUrl, asPercentage: false);
+
+      diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        androidLogoUrl,
+        asPercentage: false,
+      );
       expect(diff, 0.34839051837443613);
-      diff = await DiffImage.compareFromUrl(flutterLogoUrl, androidLogoUrl, ignoreAlpha: false, asPercentage: false);
+
+      diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        androidLogoUrl,
+        ignoreAlpha: false,
+        asPercentage: false,
+      );
       expect(diff, 0.3567169421487167);
     });
   });

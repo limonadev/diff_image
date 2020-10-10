@@ -54,7 +54,7 @@ void main() async {
       ignoreAlpha: false,
     );
     showLog('The difference between images is: ${diff.diffValue} percent');
-    await DiffImage.saveDiffImage(
+    await DiffImage.saveDiffImg(
       diffImg: diff.diffImg,
     );
     */

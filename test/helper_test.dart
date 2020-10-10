@@ -1,3 +1,5 @@
+@TestOn('vm')
+
 import 'package:test/test.dart';
 import 'package:image/image.dart';
 

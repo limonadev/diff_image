@@ -1,4 +1,7 @@
+@TestOn('browser')
+
 import 'package:diff_image/diff_image.dart';
+import 'package:diff_image/src/helper_functions.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -22,14 +25,14 @@ void main() {
         flutterLogoUrl,
         flutterLogoUrl,
       );
-      expect(diff, 0);
+      expect(diff.diffValue, 0);
 
       diff = await DiffImage.compareFromUrl(
         flutterLogoUrl,
         flutterLogoUrl,
         ignoreAlpha: false,
       );
-      expect(diff, 0);
+      expect(diff.diffValue, 0);
     });
 
     test('Compare images with different size', () async {
@@ -48,21 +51,21 @@ void main() {
         flutterLogoUrl,
         androidLogoUrl,
       );
-      expect(diff, 34.83905183744361);
+      expect(diff.diffValue, 34.83905183744361);
 
       diff = await DiffImage.compareFromUrl(
         flutterLogoUrl,
         androidLogoUrl,
         ignoreAlpha: false,
       );
-      expect(diff, 35.67169421487167);
+      expect(diff.diffValue, 35.67169421487167);
 
       diff = await DiffImage.compareFromUrl(
         flutterLogoUrl,
         androidLogoUrl,
         asPercentage: false,
       );
-      expect(diff, 0.34839051837443613);
+      expect(diff.diffValue, 0.34839051837443613);
 
       diff = await DiffImage.compareFromUrl(
         flutterLogoUrl,
@@ -70,7 +73,39 @@ void main() {
         ignoreAlpha: false,
         asPercentage: false,
       );
-      expect(diff, 0.3567169421487167);
+      expect(diff.diffValue, 0.3567169421487167);
+    });
+
+    test('Save image showing differences', () async {
+      var diff = await DiffImage.compareFromUrl(
+        flutterLogoUrl,
+        androidLogoUrl,
+      );
+      expect(diff.diffValue, 34.83905183744361);
+
+      expect(
+        () async {
+          await DiffImage.saveDiffImg(
+            diffImg: diff.diffImg,
+          );
+        },
+        throwsException,
+      );
+    });
+
+    test('Compare Image Files', () async {
+      var firstImg = await getImg(
+        imgSrc: flutterLogoUrl,
+      );
+      var secondImg = await getImg(
+        imgSrc: androidLogoUrl,
+      );
+
+      var diff = await DiffImage.compareFromMemory(
+        firstImg,
+        secondImg,
+      );
+      expect(diff.diffValue, 34.83905183744361);
     });
   });
 }

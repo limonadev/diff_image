@@ -1,6 +1,7 @@
 import 'package:image/image.dart';
 import 'package:meta/meta.dart';
 import 'helper_functions.dart';
+import 'models/diff_img_result.dart';
 
 class DiffImage {
   /// Returns a single number representing the difference between two RGB pixels
@@ -31,16 +32,20 @@ class DiffImage {
     return diff;
   }
 
-  /// Returns a single number representing the average difference between each pixel
-  static Future<num> compareFromUrl(
+  /// Computes the diffence between two images with the same width and heigth
+  /// by receiving two URLs (one for each image). Retrieves both by using an
+  /// HTTP request and returns a [DiffImgResult] containing two items:
+  ///
+  /// * An image showing the different pixels from both images.
+  /// * The average difference between each pixel.
+  ///
+  /// Can throw an [Exception].
+  static Future<DiffImgResult> compareFromUrl(
     dynamic firstImgSrc,
     dynamic secondImgSrc, {
     bool asPercentage = true,
     bool ignoreAlpha = true,
-    bool saveDiff = false,
   }) async {
-    var diff = 0.0;
-
     var firstImg = await getImg(
       imgSrc: firstImgSrc,
     );
@@ -48,11 +53,34 @@ class DiffImage {
       imgSrc: secondImgSrc,
     );
 
+    return compareFromMemory(
+      firstImg,
+      secondImg,
+      asPercentage: asPercentage,
+      ignoreAlpha: ignoreAlpha,
+    );
+  }
+
+  /// Computes the diffence between two images with the same width and heigth
+  /// by receiving two [Image] objects (one for each image). Returns a
+  /// [DiffImgResult] containing two items:
+  ///
+  /// * An image showing the different pixels from both images.
+  /// * The average difference between each pixel.
+  ///
+  /// Can throw an [Exception].
+  static DiffImgResult compareFromMemory(
+    Image firstImg,
+    Image secondImg, {
+    bool asPercentage = true,
+    bool ignoreAlpha = true,
+  }) {
+    var diff = 0.0;
+
     var imagesEqualSize = haveSameSize(
       firstImg: firstImg,
       secondImg: secondImg,
     );
-
     if (!imagesEqualSize) {
       throw UnsupportedError(
         'Currently we need images of same width and height',
@@ -61,7 +89,6 @@ class DiffImage {
 
     var width = firstImg.width;
     var height = firstImg.height;
-
     // Create an image to show the differences
     var diffImg = Image(width, height);
 
@@ -79,6 +106,7 @@ class DiffImage {
         );
         diff += diffAtPixel;
 
+        // Shows in red the different pixels and in semitransparent the same ones
         diffImg.setPixel(
           i,
           j,
@@ -95,10 +123,20 @@ class DiffImage {
 
     if (asPercentage) diff *= 100;
 
-    if (saveDiff) {
-      //TODO Define if can download image file or just show
-    }
+    return DiffImgResult(
+      diffImg: diffImg,
+      diffValue: diff,
+    );
+  }
 
-    return diff;
+  /// Function to store an [Image] object as PNG in local storage.
+  /// Not supported on web.
+  static Future<void> saveDiffImg({
+    @required Image diffImg,
+  }) async {
+    // TODO Define if can download image file or just show
+    throw UnsupportedError(
+      "Currently we can't save images on web.",
+    );
   }
 }

@@ -3,7 +3,7 @@ import 'package:image/image.dart';
 import 'package:meta/meta.dart';
 
 /// Through http get request to [imgSrc] obtains the bytes
-/// that make up an image.
+/// that make up an image. Can throw an [Exception].
 Future<Image> getImg({@required dynamic imgSrc}) async {
   Image img;
 

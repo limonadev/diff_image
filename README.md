@@ -10,6 +10,7 @@ A simple usage example:
 
 ```dart
 import 'package:diff_image/diff_image.dart';
+import 'package:image/image.dart';
 
 final FIRST_IMAGE = 'https://raw.githubusercontent.com/nicolashahn/diffimg/master/images/mario-circle-cs.png';
 final SECOND_IMAGE = 'https://raw.githubusercontent.com/nicolashahn/diffimg/master/images/mario-circle-node.png';
@@ -53,7 +54,7 @@ A more detailed example can be found [here](https://github.com/limonadev/diff_im
 
 ## Features
 
-1. Currently there is support for comparing images from the web (urls) and from memory or storage.
+1. Currently there is support for comparing images fetched from urls and from memory or storage.
 2. The `compareFromUrl` definition is:
 ```dart
   static Future<DiffImgResult> compareFromUrl(
@@ -78,7 +79,7 @@ where:
 
 Both methods return an `DiffImgResult`, a model which contains two elements: An image showing the differences between both images and the numeric value representing the difference (as percentage or not).
 
-4. A function called `saveDiffImg` save a png showing the differences between `firstImg` and `secondImg` (currently not available on Dart Web).
+4. A function called `saveDiffImg` which saves a png showing the differences between `firstImg` and `secondImg` (currently not available on Dart Web).
 
 ## Sample Results
 ### First Image

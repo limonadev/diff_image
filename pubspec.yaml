@@ -1,6 +1,6 @@
 name: diff_image
-description: A package to get the difference between two images.
-version: 1.0.0
+description: A package to get the difference between two images. Currently supports fetching images from web and from local memory.
+version: 1.0.1
 homepage: https://github.com/limonadev/diff_image
 
 environment:

@@ -4,7 +4,7 @@ version: 1.0.1
 homepage: https://github.com/limonadev/diff_image
 
 environment:
-  sdk: '>=2.5.0 <3.0.0'
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   http: ^0.13.4

@@ -1,13 +1,12 @@
 @TestOn('vm')
 
-import 'package:test/test.dart';
-import 'package:image/image.dart';
-
 import 'package:diff_image/src/helper_functions.dart';
+import 'package:image/image.dart';
+import 'package:test/test.dart';
 
 void main() {
   group('Test for helper functions', () {
-    String flutterLogoUrl, badUrl, anotherLogoUrl;
+    late String flutterLogoUrl, badUrl, anotherLogoUrl;
 
     setUp(() {
       // A real image
@@ -22,13 +21,13 @@ void main() {
 
     test('Get image from url', () async {
       var first = await getImg(
-        imgSrc: flutterLogoUrl,
+        imgSrc: Uri.parse(flutterLogoUrl),
       );
       expect(first, isA<Image>());
       expect(
         () async {
           await getImg(
-            imgSrc: badUrl,
+            imgSrc: Uri.parse(badUrl),
           );
         },
         throwsException,
@@ -37,7 +36,7 @@ void main() {
 
     test('Compare images size', () async {
       var img1 = await getImg(
-        imgSrc: flutterLogoUrl,
+        imgSrc: Uri.parse(flutterLogoUrl),
       );
       var areEquals = haveSameSize(
         firstImg: img1,
@@ -46,7 +45,7 @@ void main() {
       expect(areEquals, isTrue);
 
       var img2 = await getImg(
-        imgSrc: anotherLogoUrl,
+        imgSrc: Uri.parse(anotherLogoUrl),
       );
       areEquals = haveSameSize(
         firstImg: img1,

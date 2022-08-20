@@ -1,16 +1,15 @@
 import 'dart:io' as io;
 
 import 'package:image/image.dart';
-import 'package:meta/meta.dart';
 import 'helper_functions.dart';
 import 'models/diff_img_result.dart';
 
 class DiffImage {
   /// Returns a single number representing the difference between two RGB pixels
   static num _diffBetweenPixels({
-    @required int firstPixel,
-    @required bool ignoreAlpha,
-    @required int secondPixel,
+    required int firstPixel,
+    required bool ignoreAlpha,
+    required int secondPixel,
   }) {
     var fRed = getRed(firstPixel);
     var fGreen = getGreen(firstPixel);
@@ -43,8 +42,8 @@ class DiffImage {
   ///
   /// Can throw an [Exception].
   static Future<DiffImgResult> compareFromUrl(
-    dynamic firstImgSrc,
-    dynamic secondImgSrc, {
+    Uri firstImgSrc,
+    Uri secondImgSrc, {
     bool asPercentage = true,
     bool ignoreAlpha = true,
   }) async {
@@ -102,9 +101,9 @@ class DiffImage {
         secondPixel = secondImg.getPixel(i, j);
 
         diffAtPixel = _diffBetweenPixels(
-          firstPixel: firstPixel,
+          firstPixel: firstPixel.toInt(),
           ignoreAlpha: ignoreAlpha,
-          secondPixel: secondPixel,
+          secondPixel: secondPixel.toInt(),
         );
         diff += diffAtPixel;
 
@@ -114,8 +113,8 @@ class DiffImage {
           j,
           selectColor(
             diffAtPixel: diffAtPixel,
-            firstPixel: firstPixel,
-            secondPixel: secondPixel,
+            firstPixel: firstPixel.toInt(),
+            secondPixel: secondPixel.toInt(),
           ),
         );
       }
@@ -134,7 +133,7 @@ class DiffImage {
   /// Function to store an [Image] object as PNG in local storage.
   /// Not supported on web.
   static Future<void> saveDiffImg({
-    @required Image diffImg,
+    required Image diffImg,
   }) async {
     await io.File('DiffImg.png').writeAsBytes(
       encodePng(diffImg),

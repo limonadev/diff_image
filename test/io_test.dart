@@ -1,23 +1,23 @@
 @TestOn('vm')
 
-import 'package:test/test.dart';
 import 'package:diff_image/diff_image.dart';
 import 'package:diff_image/src/helper_functions.dart';
+import 'package:test/test.dart';
 
 void main() {
   group('Test when dart:io is supported', () {
-    String flutterLogoUrl, dartLogoUrl, androidLogoUrl;
+    late Uri flutterLogoUrl, dartLogoUrl, androidLogoUrl;
 
     setUp(() {
       // A real image
-      flutterLogoUrl =
-          'https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png';
+      flutterLogoUrl = Uri.parse(
+          'https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png');
       // Image with different size with respect to flutterLogoUrl
-      dartLogoUrl =
-          'https://www.extremetech.com/wp-content/uploads/2011/10/dart-logo-banner1-348x196.jpg';
+      dartLogoUrl = Uri.parse(
+          'https://www.extremetech.com/wp-content/uploads/2011/10/dart-logo-banner1-348x196.jpg');
       // Image with the same size as flutterLogoUrl
-      androidLogoUrl =
-          'https://seeklogo.com/images/A/android-western-logo-8F117A7F00-seeklogo.com.png';
+      androidLogoUrl = Uri.parse(
+          'https://seeklogo.com/images/A/android-western-logo-8F117A7F00-seeklogo.com.png');
     });
 
     test('Compare the same image', () async {

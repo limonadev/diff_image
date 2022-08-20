@@ -4,10 +4,10 @@ import 'package:diff_image/diff_image.dart';
 import 'package:image/image.dart';
 
 void main() async {
-  final FIRST_IMAGE_URL =
-      'https://raw.githubusercontent.com/nicolashahn/diffimg/master/images/mario-circle-cs.png';
-  final SECOND_IMAGE_URL =
-      'https://raw.githubusercontent.com/nicolashahn/diffimg/master/images/mario-circle-node.png';
+  final FIRST_IMAGE_URL = Uri.parse(
+      'https://raw.githubusercontent.com/nicolashahn/diffimg/master/images/mario-circle-cs.png');
+  final SECOND_IMAGE_URL = Uri.parse(
+      'https://raw.githubusercontent.com/nicolashahn/diffimg/master/images/mario-circle-node.png');
 
   // You need a try/catch block to handle the exceptions (http request, different size, etc)
   try {
